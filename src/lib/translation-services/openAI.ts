@@ -15,6 +15,7 @@ export default async function translate(
     body: JSON.stringify({
       prompt: prompt,
       model: options.openAIOptions.model,
+      messages: [{"role": "user", "content": prompt}],
       temperature: options.openAIOptions.temperature,
       max_tokens: options.openAIOptions.maxTokens,
       top_p: options.openAIOptions.topP,
