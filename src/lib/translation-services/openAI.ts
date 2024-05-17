@@ -4,7 +4,7 @@ export default async function translate(
   string: string,
   options: TranslationOptions,
 ): Promise<string> {
-  const prompt = `Translate the following from the locale '${options.fromLocale}' to the locale '${options.toLocale}': ${string}`
+  const prompt = `Translate the following from the locale '${options.fromLocale}' to the locale '${options.toLocale}' and only output the final translation, nothing else: ${string}`
 
   const requestOptions = {
     method: 'POST',
