@@ -250,7 +250,7 @@ export default function FieldAddon({ ctx }: Props) {
             }
             disabled={isTranslating}
           >
-            Copy and translate from {locales[0]}
+            (For Thai) Copy and translate from {locales[0]}
           </Button>
         </Form>
       </Canvas>
