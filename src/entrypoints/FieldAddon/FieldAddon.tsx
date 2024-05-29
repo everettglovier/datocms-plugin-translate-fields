@@ -259,21 +259,23 @@ export default function FieldAddon({ ctx }: Props) {
 
   return (
     <Canvas ctx={ctx}>
-      { false && <Form
-        onSubmit={() =>
-          translateField(locales.filter((locale) => locale !== currentLocale))
-        }
-      >
-        <Button
-          buttonSize="xxs"
-          type="submit"
-          rightIcon={isTranslating ? <Spinner size={24} /> : null}
-          disabled={isTranslating}
+      {false && (
+        <Form
+          onSubmit={() =>
+            translateField(locales.filter((locale) => locale !== currentLocale))
+          }
         >
-          Translate to all locales (
-          {locales.filter((locale) => locale !== currentLocale).join(', ')})
-        </Button>
-      </Form> }
+          <Button
+            buttonSize="xxs"
+            type="submit"
+            rightIcon={isTranslating ? <Spinner size={24} /> : null}
+            disabled={isTranslating}
+          >
+            Translate to all locales (
+            {locales.filter((locale) => locale !== currentLocale).join(', ')})
+          </Button>
+        </Form>
+      )}
     </Canvas>
   )
 }
